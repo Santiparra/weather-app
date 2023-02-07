@@ -1,4 +1,4 @@
-import { weatherBuilder } from "./modules/Builder";
+import { weatherBuilder } from "./Builder"
 
 export const populateDom = (() => {
 
