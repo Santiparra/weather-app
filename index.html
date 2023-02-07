@@ -8,17 +8,35 @@
         <script src="bundle.js" defer></script>
         </head>
     <body>
-        <form id="search" novalidate>
-            <input id="searchTerm" type="text"/>
-            <button id="searchButton" type="submit">Buscar</button>
-        </form>
+        <div id="options">
+            <form id="search" novalidate>
+                <input id="searchTerm" type="text"/>
+                <button id="searchButton" type="submit">Buscar</button>
+                <label class="switch"> Language
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                  <label class="switch"> Units
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                  </label>  
+
+            </form>
+
+
+
+            <div id="anguage">Language: <p id="selectedLang"></p></div>
+            <div id="units">Units: <p id="selectedUn"></p></div>
+        </div>
         <div id="show-Weather">
             <div id="city"></div>
             <div id="description"></div> 
+            <div id="temp"></div>
+
             <div id="feelsLike"></div>
             <div id="humidity"></div>
             <div id="pressure"></div>
-            <div id="temp"></div>
+            
             <div id="tempMax"></div>
             <div id="tempMin"></div>
         </div>    
