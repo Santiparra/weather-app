@@ -1,3 +1,4 @@
 import "./styles.css";
-import { handleInput } from "./modules/Handler";
-console.log("hello world!");
+import { getWeather } from "./modules/Handler"; 
+
+getWeather("Montevideo")
