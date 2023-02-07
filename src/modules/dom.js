@@ -12,16 +12,18 @@ const showTempMax = document.getElementById("tempMax")
 const showTempMin = document.getElementById("tempMin")
 
 async function render (weatherValue) {
-  const currentWeather = await weatherBuilder.setWeather(weatherValue)
-  console.log(currentWeather.city)
-  showCity.textContent = currentWeather.city
-  showDescription.textContent = currentWeather.description;
-  showFeelsLike.textContent = currentWeather.feelsLike;
-  showHumidity.textContent = currentWeather.humidity;
-  showPressure.textContent = currentWeather.pressure;
-  showTemp.textContent = currentWeather.temp;
-  showTempMax.textContent = currentWeather.temp_max;
-  showTempMin.textContent = currentWeather.temp_min;
+  try {
+    const currentWeather = await weatherBuilder.setWeather(weatherValue)
+    console.log(currentWeather.city)
+    showCity.textContent = currentWeather.city
+    showDescription.textContent = currentWeather.description;
+    showFeelsLike.textContent = currentWeather.feelsLike;
+    showHumidity.textContent = currentWeather.humidity;
+    showPressure.textContent = currentWeather.pressure;
+    showTemp.textContent = currentWeather.temp;
+    showTempMax.textContent = currentWeather.temp_max;
+    showTempMin.textContent = currentWeather.temp_min;
+  } catch (err) {console.error(err)}
 }
 return {render}
 } )()
