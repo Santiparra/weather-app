@@ -43,7 +43,7 @@ const config = {
         include: /\.module\.css$/
       },
       {
-        test: /\.jpg$/,
+        test: /\.png$/,
         use: 'file-loader',
         type: "asset/resource"
       },

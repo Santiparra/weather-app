@@ -5,27 +5,38 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Weather App</title>
+        <link href='https://fonts.googleapis.com/css?family=Merriweather Sans' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Imprima' rel='stylesheet'>
         <script src="bundle.js" defer></script>
         </head>
     <body>
-        <div id="options">
-            <form id="search" novalidate>
-                <input id="searchTerm" type="text"/>
-                <button id="searchButton" type="submit">Buscar</button>                
-            </form>
-       </div>
-        <div id="show-Weather">
-            <div id="city"></div>
-            <div id="condition"></div>
-            <div id="description"></div> 
-            <div id="temp"></div>
-
-            <div id="feelsLike"></div>
-            <div id="humidity"></div>
-            <div id="pressure"></div>
-            
-            <div id="tempMax"></div>
-            <div id="tempMin"></div>
-        </div>    
+        <header>
+            <div class="header-title">Weather App</div>
+            <div id="options">
+                <form id="search" novalidate>
+                    <input id="searchTerm" type="text" placeholder="Escriba su ciudad aquí"/>
+                    <button id="searchButton" type="submit">Buscar</button>                
+                </form>
+        </div>
+        </header>
+        <main>
+            <div id="show-Weather">
+                <div class="data-main">
+                
+                    <div id="city"></div>
+                    <div id="description">
+                        <p id="temp"></p>
+                        <p id="condition"></p>                        
+                    </div> 
+                </div>
+                <div class="data-sec">
+                    <div id="feelsLike"></div>
+                    <div id="humidity"></div>
+                    <div id="pressure"></div>                
+                    <div id="tempMax"></div>
+                    <div id="tempMin"></div>
+                </div>
+            </div>
+        </main>   
     </body>
 </html>
