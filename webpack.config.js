@@ -10,7 +10,8 @@ const config = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    assetModuleFilename: "[name][ext]",
   },
   module: {
     rules: [
@@ -42,8 +43,9 @@ const config = {
         include: /\.module\.css$/
       },
       {
-        test: /\.svg$/,
-        use: 'file-loader'
+        test: /\.jpg$/,
+        use: 'file-loader',
+        type: "asset/resource"
       },
       {
         test: /\.png$/,
