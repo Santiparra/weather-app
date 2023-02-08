@@ -17,12 +17,12 @@ async function render (weatherValue) {
     console.log(currentWeather.city)
     showCity.textContent = currentWeather.city
     showDescription.textContent = currentWeather.description;
-    showFeelsLike.textContent = currentWeather.feelsLike;
-    showHumidity.textContent = currentWeather.humidity;
-    showPressure.textContent = currentWeather.pressure;
-    showTemp.textContent = currentWeather.temp;
-    showTempMax.textContent = currentWeather.temp_max;
-    showTempMin.textContent = currentWeather.temp_min;
+    showFeelsLike.textContent = `Sensación térmica ${currentWeather.feels_like} ºC`;
+    showHumidity.textContent = `Humedad ${currentWeather.humidity} %`;
+    showPressure.textContent = `Presión atmosférica ${currentWeather.pressure} hPa`;
+    showTemp.textContent = `Temperatura ${currentWeather.temp} ºC`;
+    showTempMax.textContent = `Temperatura máxima ${currentWeather.temp_max} ºC`;
+    showTempMin.textContent = `Temperatura mínima ${currentWeather.temp_min} ºC`;
   } catch (err) {console.error(err)}
 }
 return {render}
