@@ -4,7 +4,7 @@ El objetivo del proyecto es trabajar con Apis mediante promesas con la sintaxis 
 
 API:
 
-  https://openweathermap.org/
+    https://openweathermap.org/
 
 Las pautas del proyecto pueden encontrarse en:
 
